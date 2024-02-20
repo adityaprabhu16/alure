@@ -32,7 +32,7 @@ p {
   
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.6))), url("/images/garden.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("./images/vineyard.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url("./images/vineyard.jpg");
   height: 100%;
   background-size: cover;
   background-position: center center;
@@ -483,7 +483,7 @@ ul {
   padding-top: 16px;
 }
   
-  @media only screen and (max-width: 1200px) and (min-width: 200px) {
+  @media only screen and (max-width: 432px) and (min-width: 100px) {
     .center {
       width: autopx;
       margin-left: 25px;
@@ -516,7 +516,8 @@ ul {
     .center .container .introduction .container-info .row-1 .info-1 .info-1b {
       max-width: 1000px;
       max-height: 500px;
-      overflow: auto;
+      /*overflow: auto;*/
+      overflow-y: auto;
       padding-bottom: 2em;
     }
     .center .container .introduction .container-info .row-1 .info-1 .info-1b #iot-visual-location {
@@ -560,6 +561,10 @@ ul {
       content: "top";
       color: var(--primary-color);
       margin-left: -30px;
+    }
+    .trap-image {
+      width: 124px;
+      height: 160px;
     }
   }
   

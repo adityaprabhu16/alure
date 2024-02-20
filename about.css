@@ -3,52 +3,59 @@
     --secondary-color: white;
   }
   
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Montserrat','sans-serif';
-  }
-  
-  body {
-    background: black;
-  }
-  
-.background-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("./images/vineyard.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+* {
+  font-family: 'Montserrat','sans-serif';
 }
-
-.container {
-  margin: auto;
+  
+body {
+    background: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url("./images/vineyard.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
   
 .welcome-text {
-  margin: 10% 25%;
   text-align: center;
   color: #fff;
   border-radius: 0.5em;
-  -webkit-animation: slide-up 1.4s ease-in-out, fade-in 3s;
-          animation: slide-up 1.4s ease-in-out, fade-in 3s;
+}
+
+.welcome-text div {
+  margin: 1.25em;
+}
+
+.welcome-text img {
+  width: 200px;
+  border-radius: 2em;
 }
   
-.welcome-text h1 {
+.welcome-text h2 {
   text-transform: uppercase;
-  font-size: 2em;
-  font-size: 45px;
+  font-size: 16px;
 }
+
+.welcome-text h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/*Start of contact section*/
+.contact-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact-text h2 {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 1.16em;
+  color: white;
+}
+
   /*Start of Navigation*/
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
   
 .logo h1 {
