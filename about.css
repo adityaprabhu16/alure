@@ -52,6 +52,9 @@ body {
   margin-right: 1.16em;
   color: white;
 }
+.contact-text h2 a:hover {
+  color: yellow;
+}
 
   /*Start of Navigation*/
 .logo {
