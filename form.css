@@ -1,0 +1,139 @@
+:root {
+    --primary-color: rgba(13, 21, 16, 0.435);
+    --secondary-color: white;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Montserrat','sans-serif';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.main-header {
+    color: white;
+    margin-left: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    color: var(--txt-color);
+    font-weight: normal;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("./images/vineyard.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+/*
+.background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("./images/vineyard.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+*/
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 40px 0px 0px 15px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+.logo{
+    width: 48px;
+    cursor: pointer;
+}
+.navbar ul li{
+    padding: 1.5em 0.5em;
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li a:hover{
+    color: yellow;
+}
+
+
+#myForm {
+    margin-top: 2em;
+    margin-left: 3em;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+table tr td {
+    padding: 1em 1em;
+    border: 1px solid gray;
+}
+
+table tr td input{
+    padding: 0.5em 1em;
+}
+
+table tr td select {
+    padding-right: 8.5em;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    text-align: left;
+}
+
+#send-button {
+    /*
+    margin-top: 2em;
+    margin-left: 2em;
+    width: 200px;
+    */
+    padding: 1em 4.5em;
+    background-color: lightgray;
+    border-radius: 7px;
+    border: none;
+}
+
+#send-button:hover {
+    background-color: mediumseagreen;
+    color: var(--txt-color);
+}
+
+#reset-button {
+    padding: 1em 4.5em;
+    background-color: lightgray;
+    border-radius: 7px;
+    border: none;
+}
+#reset-button:hover {
+    background-color: lightcoral;
+    color: var(--txt-color);
+}
+
+#success {
+    color: white;
+    margin-left: 3em;
+    margin-top: 1.25em;
+}

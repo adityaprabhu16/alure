@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Montserrat','sans-serif';
+}
+
+.banner {
+    width: 100%;
+    height: 100vh; 
+}
+
+.video-wrapper {
+    border: 2px solid #000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    filter: brightness(32%);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.logo img {
+    margin-left: 8px;
+    width: 70px;
+    height: 80px;
+    margin-top: 25px;
+}
+
+.logo{
+    width: 48px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 85%;
+    position: relative; /*Ensures navbar ABOVE video*/
+    margin: auto;
+    padding: 35px 0px; /*top right bottom left*/
+    align-items: center;
+    display: flex;
+}
+
+.navbar ul li{
+    padding: 1.5em 0.5em;
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover{
+    color: yellow;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    margin-top: 1.5em;
+}
+.content h1{
+    font-size: 100px;
+    margin-top: 80px;
+}
+.content h2 {
+    font-size: 48px;
+    margin-top: 20px;
+}
+.content p{
+    margin: 20px auto;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 25px;
+}
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    font-weight: 100;
+    background: transparent;
+    line-height: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    transition: 0.5s;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border-color: white;
+}
+
+.content .follow {
+    font-size: 16px;
+}
+
+.social-icon {
+    font-size: 32px;
+    color: #aaaaaa;
+    transition: color 0.2s; /*take 0.2s for the transition*/
+    text-decoration: none;
+    margin: 0 10px;  /*0px for top/bottom, 10px for left/right*/
+}
+
+#linkedin {
+    color: rgb(10,102,194);
+    transition: color 0.2s;
+}
+#linkedin:hover {
+    color: rgb(255, 255, 255);
+}
+
+#facebook {
+    color: rgb(24,119,242);
+}
+#facebook:hover {
+    color: rgb(255, 255, 255);
+}
+
+#youtube {
+    color: rgb(249, 79, 79);
+}
+#youtube:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*Start of Navigation*/
+.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+    
+  .logo h1 {
+    color: white;
+    padding: 1em 0em 0.5em 1.64em;
+    font-weight: none;
+  }
+  
+  .logo img {
+    margin-left: 8px;
+    width: 70px;
+    height: 80px;
+    margin-top: 25px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: yellow;
+  }
+  
+  .navbar{
+      width: 85%;
+      margin: auto;
+      padding: 40px 0px 0px 15px;
+      justify-content: left;
+      align-items: center;
+      display: flex;
+  }
+  .logo{
+      width: 48px;
+      cursor: pointer;
+  }
+  .navbar ul li{
+      padding: 1.5em 0.5em;
+      list-style: none;
+      display: inline-block;
+      margin: 0px 20px;
+  }
+  .navbar ul li a{
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+  }
+  .navbar ul li a:hover{
+    color: yellow;
+  }
+  /*End of Navigation*/
+
+@media only screen and (max-width: 560px) {
+    .content h1 {
+        margin-bottom: -1.25em;
+    }
+    .content h2 {
+        margin-top: 5em;
+        font-size: 32px;
+    }
+    .content p {
+        font-size: 16px;
+    }
+    .logo {
+        width: 48px;
+    }
+}
+
+
+@media only screen and (max-width: 455px) {
+    .navbar ul li a {
+        font-size: 16px;
+    }
+    .content h1 {
+        font-size: 55px;
+    }
+    .content h2 {
+        font-size: 20px;
+    }
+    .content p {
+        font-size: 10px;
+    }
+    button {
+        width: 100px;
+        line-height: 10px;
+    }
+    button a {
+        text-decoration: none;
+        color: white;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .content h1 {
+        font-size: 45px;
+    }
+    .content h2 {
+        font-size: 15px;
+    }
+    .content p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}

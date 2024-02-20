@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alure Preorders</title>
+        <meta charset="utf-8">
+        <link href="preorder.css" rel="stylesheet">
+        <!--(7.) Link to Font Style (Copy + Paste)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <!--Favicon (Logo in the Search Bar)-->
+        <link rel="shortcut icon" type = "image/svg" href="images/logo.png">
+        <!--JQuery CDN: -->
+        <script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <div class="background-image">
+            <div class="navbar">
+                <img src="images/logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">Information</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+    
+            <div class="container">
+                <h1 class="main-header">Preorder</h1>
+                <form id="myForm" name="">
+                    <table>
+                        <tr>
+                            <td><label for="start">Contact</label></td>
+                            <td><input type="text" id="start" name="contact" placeholder="hello123@gmail.com" required
+                                oninput="this.setCustomValidity('')">
+                            </td>
+                        </tr>
+                        <!--
+                            <tr>
+                                <td><label for="zipcode">Zipcode</label></td>
+                                <td><input type="text" id="zipcode" name="zipcode" required
+                                    oninput="this.setCustomValidity('')"></td>
+                            </tr>
+                        -->
+
+                        <tr>
+                            <td><label for="phone">Phone</label></td>
+                            <td><input type="text" id="phone" name="phone" placeholder="NA if not applicable"
+                                oninput="this.setCustomValidity('')"></td>
+                        </tr>
+
+                        <!--
+                            <tr>
+                                <td><label for="extra">Tell us about the problem!</label></td>
+                                <td><input type="text" id="extra" name="extra" required placeholder="NA if not applicable"></td>
+                            </tr> 
+                        -->
+
+                        <tr>
+                            <td><input type="reset" id="reset-button" value="Reset"></td>
+                            <td><input type="submit" id="send-button" value="Next"></td>
+                        </tr>
+
+                    </table>
+                </form>
+                <span id="success"></span>
+            </div>
+        </div>
+        <script>
+            //Source: https://www.youtube.com/watch?v=nTbocTgkWqY
+            //const scriptURL = 'https://script.google.com/macros/s/AKfycbwv_9f9txwDDJC1xFTcNuONuBIXbXDKQHpEUTLJrCWrnUjFRVh9ecybkW5lKWdhlJgWgw/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyW3ZhkxJzdVj1Y410O7JiY6E15XSaCP1Q67mPgLCvq2LPSrxKQXlK0wLJWx_Z8ixklSg/exec'
+            const form = document.getElementById("myForm");
+            const success = document.getElementById("success");
+
+            form.addEventListener('submit', e => {
+                success.innerHTML = "Loading please wait...";
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response);
+                    form.reset();
+                    success.innerHTML = "Success!";
+                    //window.location.href = "https://www.google.com";
+                    //Take to Stripe payment gateway:
+                    window.location.href = "https://buy.stripe.com/5kA5og9LEegNdGMfYY";
+                })
+                .catch(error => console.error('Error!', error.message))
+                setTimeout(function () {
+                    success.innerHTML="";
+                }, 8000);
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alure LLC</title>
+    <link rel="stylesheet" href="index.css">
+    <!--Favicon (Logo in the Search Bar)-->
+    <link rel="shortcut icon" type = "image/svg" href="images/logo.png">
+    <!--Important Links to Font-Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <!--Font-Awesome for Hamburger Menus-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="video-wrapper">
+            <video playsinline autoplay muted loop poster="images/vineyard.jpg">
+                <source src="videos/vineyard.mp4" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        
+            <div class="banner">
+                
+                <!--Navigation-->
+                <!--Get Navigation to Display:
+                https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+                -->
+                <div class="navbar">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="intro.html">Information</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <!--Content-->
+                <div class="content">
+                    <h1><em>Alure</em></h1>
+                    <h2>Eliminate Japanese Beetles.</h2>
+                    <p>FOLLOW ALURE LLC FOR MORE</p>
+                    <div>
+                        <button type="button" onclick="location.href = 'preorder.html'"><a href="preorder.html">PREORDER</a></button>
+                        <button type="button" onclick="location.href = 'form.html'"><a href="form.html">JOIN EMAIL LIST</a></button>
+                    </div>
+                    <p class="follow"><em>Follow us on...</em></p>
+                    <!--https://ionic.io/ionicons-->
+                    <a class="social-icon" id="linkedin" href="https://www.linkedin.com/company/alure-llc/about/?viewAsMember=true">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a class="social-icon" id="facebook" href="https://www.facebook.com/realalurellc/">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a class="social-icon" id="youtube" href="https://www.youtube.com/channel/UCf8V6pmc1YbrwKlRk3u1Fdw">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </div>
+                <!--https://ionic.io/ionicons/usage-->
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
