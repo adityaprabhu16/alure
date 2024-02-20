@@ -12,7 +12,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url("./images/vineyard.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
   
 .welcome-text {
